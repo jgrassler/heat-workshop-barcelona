@@ -1,0 +1,14 @@
+  myserver:
+    type: OS::Nova::Server
+    properties:
+      name: myserver
+      config_drive: true
+      flavor: { get_param: flavor }
+      image: { get_param: image }
+      key_name: { get_param: key_name }
+      networks:
+        - port: { get_resource: myport }
+      user_data_format: RAW
+      user_data: |
+        #!/bin/sh
+        echo 'Hello, World' >> /etc/motd

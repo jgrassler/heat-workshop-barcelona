@@ -1,0 +1,8 @@
+
+resources:
+
+  mynetwork:
+    type: OS::Neutron::Net
+    properties:
+      name: mynet
+

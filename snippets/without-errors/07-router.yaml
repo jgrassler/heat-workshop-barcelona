@@ -1,0 +1,8 @@
+
+  router:
+    type: OS::Neutron::Router
+    properties:
+      external_gateway_info:
+        network:
+          get_param: floating_network
+

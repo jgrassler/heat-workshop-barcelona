@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+from __future__ import print_function
+from HTMLParser import HTMLParser
+
+import codecs
+import sys
+
+class CommentExtractor(HTMLParser):
+  def __init__(self):
+    HTMLParser.__init__(self)
+    self.comments = []
+  def handle_comment(self, data):
+    self.comments.append(data)
+
+e = CommentExtractor()
+
+if ( len(sys.argv) > 1 ):
+  for arg in sys.argv[1:]:
+    try:
+      r = codecs.getreader("utf8")(open(arg))
+      for line in r.readlines():
+        e.feed(line)
+      e.close()
+    except IOError as e:
+      print("Couldn't open %s for reading: %s" % (arg, e.strerror))
+
+for comment in e.comments:
+  print(comment)

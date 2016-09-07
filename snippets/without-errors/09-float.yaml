@@ -1,0 +1,8 @@
+
+  myfloatingip:
+    type: OS::Neutron::FloatingIP
+    properties:
+      port_id: { get_resource: myport }
+      floating_network:
+        get_param: floating_network
+

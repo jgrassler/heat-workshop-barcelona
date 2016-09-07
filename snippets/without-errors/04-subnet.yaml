@@ -1,0 +1,9 @@
+
+  mysubnet:
+    type: OS::Neutron::Subnet
+    properties:
+      cidr: 10.0.0.1/24
+      name: mysubnet
+      network:
+        get_resource: mynetwork
+

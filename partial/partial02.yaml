@@ -1,0 +1,18 @@
+
+heat_template_version: 2015-10-15
+
+
+parameters:
+  floating_network:
+    type: string
+    default: floating
+  image:
+    type: string
+    default: cirros-0.3.4-x86_64-disk.img
+  flavor:
+    type: string
+    default: m1.tiny
+  key_name:
+    type: string
+    default: mykey
+

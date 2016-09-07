@@ -1,0 +1,50 @@
+
+heat_template_version: 2015-10-15
+
+
+parameters:
+  floating_network:
+    type: string
+    default: floating
+  image:
+    type: string
+    default: cirros-0.3.4-x86_64-disk.img
+  flavor:
+    type: string
+    default: m1.tiny
+  key_name:
+    type: string
+    default: mykey
+
+
+resources:
+
+  mynetwork:
+    type: OS::Neutron::Net
+    properties:
+      name: mynet
+
+
+  mysubnet:
+    type: OS::Neutron::Subnet
+    properties:
+      cidr: 10.0.0.1/24
+      name: mysubnet
+      network:
+        get_resource: mynetwork
+
+
+  myport:
+    type: OS::Neutron::Port
+    properties:
+      network:
+        get_resource: mynetwork
+
+
+  myfloatingip:
+    type: OS::Neutron::FloatingIP
+    properties:
+      port_id: { get_resource: myport }
+      floating_network:
+        get_param: floating_network
+

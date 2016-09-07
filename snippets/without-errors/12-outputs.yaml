@@ -1,0 +1,8 @@
+
+outputs:
+  floating_ip:
+    value:
+      get_attr:
+        - myfloatingip
+        - floating_ip_address
+

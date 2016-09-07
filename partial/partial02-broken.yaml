@@ -1,0 +1,28 @@
+
+heat_template_version: 2015-10-15
+
+# One of the lines in this snippet is indented with tabs instead of spaces.
+# This causes the following error message:
+#
+# Error parsing template file:///root/partial/partial02-broken.yaml while scanning for the next token
+# found character that cannot start any token
+#  in "<unicode string>", line 14, column 1
+
+parameters:
+  floating_network:
+		description: A network containing one or more floating IP pools # BAD INDENT HERE
+    type: string
+    default: floating
+  image:
+    description: The image to use for the server
+    type: string
+    default: cirros-0.3.4-x86_64-disk.img
+  flavor:
+    description: The image to use for the server
+    type: string
+    default: m1.tiny
+  key_name:
+    description: The image to use for the server
+    type: string
+    default: root
+

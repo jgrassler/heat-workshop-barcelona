@@ -1,0 +1,7 @@
+
+  myport:
+    type: OS::Neutron::Port
+    properties:
+      network:
+        get_resource: mynetwork
+

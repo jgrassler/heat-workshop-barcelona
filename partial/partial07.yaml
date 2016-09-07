@@ -1,0 +1,64 @@
+
+heat_template_version: 2015-10-15
+
+
+parameters:
+  floating_network:
+    type: string
+    default: floating
+  image:
+    type: string
+    default: cirros-0.3.4-x86_64-disk.img
+  flavor:
+    type: string
+    default: m1.tiny
+  key_name:
+    type: string
+    default: mykey
+
+
+resources:
+
+  mynetwork:
+    type: OS::Neutron::Net
+    properties:
+      name: mynet
+
+
+  mysubnet:
+    type: OS::Neutron::Subnet
+    properties:
+      cidr: 10.0.0.1/24
+      name: mysubnet
+      network:
+        get_resource: mynetwork
+
+
+  myport:
+    type: OS::Neutron::Port
+    properties:
+      network:
+        get_resource: mynetwork
+
+  myserver:
+    type: OS::Nova::Server
+    properties:
+      name: myserver
+      config_drive: true
+      flavor: { get_param: flavor }
+      image: { get_param: image }
+      key_name: { get_param: key_name }
+      networks:
+        - port: { get_resource: myport }
+      user_data_format: RAW
+      user_data: |
+        #!/bin/sh
+        echo 'Hello, World' >> /etc/motd
+
+  router:
+    type: OS::Neutron::Router
+    properties:
+      external_gateway_info:
+        network:
+          get_param: floating_network
+

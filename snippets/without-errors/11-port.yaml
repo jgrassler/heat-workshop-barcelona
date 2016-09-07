@@ -1,0 +1,9 @@
+
+  myport:
+    type: OS::Neutron::Port
+    properties:
+      network:
+        get_resource: mynetwork
+      security_groups:                # NEW
+        - get_resource: allow_inbound # NEW
+
