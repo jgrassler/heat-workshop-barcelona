@@ -1,0 +1,13 @@
+<sequential
+  display_name="Services and Architecture"
+  graded="False">
+  <vertical
+    display_name="Services and Architecture"
+    url_name="services_and_architecture">
+    <html
+      display_name="Services and Architecture"
+      url_name="services_and_architecture">
+      <%block filter="olx_helpers.markdown_file">slides/services_and_architecture.md</%block>
+    </html>
+  </vertical>
+</sequential>

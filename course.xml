@@ -4,4 +4,5 @@
   url_name="${course.url_name()}"
   course="${course.course()}"
   org="${course.org()}">
+  <chapter url_name="introduction"/>
 </course>

@@ -1,0 +1,13 @@
+<sequential
+  display_name="What is Heat?"
+  graded="False">
+  <vertical
+    display_name="What is Heat?"
+    url_name="what_is_heat">
+    <html
+      display_name="What is Heat?"
+      url_name="what_is_heat">
+      <%block filter="olx_helpers.markdown_file">slides/what_is_heat.md</%block>
+    </html>
+  </vertical>
+</sequential>

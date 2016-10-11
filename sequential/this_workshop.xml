@@ -1,0 +1,13 @@
+<sequential
+  display_name="This Workshop"
+  graded="False">
+  <vertical
+    display_name="This Workshop"
+    url_name="this_workshop">
+    <html
+      display_name="This Workshop"
+      url_name="this_workshop">
+      <%block filter="olx_helpers.markdown_file">slides/this_workshop.md</%block>
+    </html>
+  </vertical>
+</sequential>
