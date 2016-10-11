@@ -1,0 +1,13 @@
+<sequential
+  display_name="Security Groups to the Rescue"
+  graded="False">
+  <vertical
+    display_name="Security Groups to the Rescue"
+    url_name="security_groups_to_the_rescue">
+    <html
+      display_name="Security Groups to the Rescue"
+      url_name="security_groups_to_the_rescue">
+      <%block filter="olx_helpers.markdown_file">slides/security_groups_to_the_rescue.md</%block>
+    </html>
+  </vertical>
+</sequential>

@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 6: External network not reachable"
+  graded="False">
+  <vertical
+    display_name="Error 6: External network not reachable"
+    url_name="error_6_external_network_not_reachable">
+    <html
+      display_name="Error 6: External network not reachable"
+      url_name="error_6_external_network_not_reachable">
+      <%block filter="olx_helpers.markdown_file">slides/error_6_external_network_not_reachable.md</%block>
+    </html>
+  </vertical>
+</sequential>

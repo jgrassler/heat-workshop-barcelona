@@ -1,0 +1,24 @@
+<chapter display_name="Hands On: Creating a Heat Stack">
+  <sequential url_name="preparations" />
+  <sequential url_name="a_minimal_template" />
+  <sequential url_name="error_1_heat_template_version" />
+  <sequential url_name="adding_parameters_to_your_template" />
+  <sequential url_name="error_2_tabs_versus_spaces" />
+  <sequential url_name="creating_a_network" />
+  <sequential url_name="creating_a_subnet" />
+  <sequential url_name="a_port_on_your_network" />
+  <sequential url_name="creating_an_instance" />
+  <sequential url_name="error_4_ssh_key_not_found" />
+  <sequential url_name="error_5_no_valid_host_was_found" />
+  <sequential url_name="attempt_to_associate_a_floating_ip" />
+  <sequential url_name="error_6_external_network_not_reachable" />
+  <sequential url_name="creating_a_router" />
+  <sequential url_name="adding_a_routerinterface" />
+  <sequential url_name="associating_a_floating_ip" />
+  <sequential url_name="error_7_floating_ip_unreachable" />
+  <sequential url_name="security_groups_to_the_rescue" />
+  <sequential url_name="error_8_security_group_not_associated" />
+  <sequential url_name="port_revisited" />
+  <sequential url_name="outputs_whats_my_floating_ip" />
+  <sequential url_name="error_9_cant_delete_stack" />
+</chapter>

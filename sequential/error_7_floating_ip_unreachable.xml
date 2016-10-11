@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 7: Floating IP unreachable"
+  graded="False">
+  <vertical
+    display_name="Error 7: Floating IP unreachable"
+    url_name="error_7_floating_ip_unreachable">
+    <html
+      display_name="Error 7: Floating IP unreachable"
+      url_name="error_7_floating_ip_unreachable">
+      <%block filter="olx_helpers.markdown_file">slides/error_7_floating_ip_unreachable.md</%block>
+    </html>
+  </vertical>
+</sequential>

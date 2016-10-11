@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 2: Tabs versus spaces"
+  graded="False">
+  <vertical
+    display_name="Error 2: Tabs versus spaces"
+    url_name="error_2_tabs_versus_spaces">
+    <html
+      display_name="Error 2: Tabs versus spaces"
+      url_name="error_2_tabs_versus_spaces">
+      <%block filter="olx_helpers.markdown_file">slides/error_2_tabs_versus_spaces.md</%block>
+    </html>
+  </vertical>
+</sequential>

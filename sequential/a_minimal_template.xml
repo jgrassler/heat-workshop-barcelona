@@ -1,0 +1,13 @@
+<sequential
+  display_name="A minimal template"
+  graded="False">
+  <vertical
+    display_name="A minimal template"
+    url_name="a_minimal_template">
+    <html
+      display_name="A minimal template"
+      url_name="a_minimal_template">
+      <%block filter="olx_helpers.markdown_file">slides/a_minimal_template.md</%block>
+    </html>
+  </vertical>
+</sequential>

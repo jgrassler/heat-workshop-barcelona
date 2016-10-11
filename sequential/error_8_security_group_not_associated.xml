@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 8: Security Group not associated"
+  graded="False">
+  <vertical
+    display_name="Error 8: Security Group not associated"
+    url_name="error_8_security_group_not_associated">
+    <html
+      display_name="Error 8: Security Group not associated"
+      url_name="error_8_security_group_not_associated">
+      <%block filter="olx_helpers.markdown_file">slides/error_8_security_group_not_associated.md</%block>
+    </html>
+  </vertical>
+</sequential>
