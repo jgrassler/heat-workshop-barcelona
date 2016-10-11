@@ -1,0 +1,10 @@
+<%namespace file="/course.xml" name="course"/>\
+<course
+  display_name="${course.display_name()}${course.suffix()}"
+  url_name="${course.url_name()}"
+  course="${course.course()}"
+  org="${course.org()}">
+  <chapter url_name="introduction"/>
+  <chapter url_name="anatomy_of_a_heat_template"/>
+  <chapter url_name="hands_on_creating_a_heat_stack"/>
+</course>

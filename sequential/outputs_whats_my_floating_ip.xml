@@ -1,0 +1,13 @@
+<sequential
+  display_name="Outputs: What's my Floating IP?"
+  graded="False">
+  <vertical
+    display_name="Outputs: What's my Floating IP?"
+    url_name="outputs_whats_my_floating_ip">
+    <html
+      display_name="Outputs: What's my Floating IP?"
+      url_name="outputs_whats_my_floating_ip">
+      <%block filter="olx_helpers.markdown_file">slides/outputs_whats_my_floating_ip.md</%block>
+    </html>
+  </vertical>
+</sequential>

@@ -1,0 +1,13 @@
+<sequential
+  display_name="Attempt to associate a floating IP"
+  graded="False">
+  <vertical
+    display_name="Attempt to associate a floating IP"
+    url_name="attempt_to_associate_a_floating_ip">
+    <html
+      display_name="Attempt to associate a floating IP"
+      url_name="attempt_to_associate_a_floating_ip">
+      <%block filter="olx_helpers.markdown_file">slides/attempt_to_associate_a_floating_ip.md</%block>
+    </html>
+  </vertical>
+</sequential>

@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 4: SSH key not found"
+  graded="False">
+  <vertical
+    display_name="Error 4: SSH key not found"
+    url_name="error_4_ssh_key_not_found">
+    <html
+      display_name="Error 4: SSH key not found"
+      url_name="error_4_ssh_key_not_found">
+      <%block filter="olx_helpers.markdown_file">slides/error_4_ssh_key_not_found.md</%block>
+    </html>
+  </vertical>
+</sequential>

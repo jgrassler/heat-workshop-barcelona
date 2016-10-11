@@ -1,0 +1,13 @@
+<sequential
+  display_name="Creating a Router"
+  graded="False">
+  <vertical
+    display_name="Creating a Router"
+    url_name="creating_a_router">
+    <html
+      display_name="Creating a Router"
+      url_name="creating_a_router">
+      <%block filter="olx_helpers.markdown_file">slides/creating_a_router.md</%block>
+    </html>
+  </vertical>
+</sequential>

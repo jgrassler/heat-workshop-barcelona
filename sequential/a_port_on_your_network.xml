@@ -1,0 +1,13 @@
+<sequential
+  display_name="A Port on your Network"
+  graded="False">
+  <vertical
+    display_name="A Port on your Network"
+    url_name="a_port_on_your_network">
+    <html
+      display_name="A Port on your Network"
+      url_name="a_port_on_your_network">
+      <%block filter="olx_helpers.markdown_file">slides/a_port_on_your_network.md</%block>
+    </html>
+  </vertical>
+</sequential>

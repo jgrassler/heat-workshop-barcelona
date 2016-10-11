@@ -1,0 +1,13 @@
+<sequential
+  display_name="Overview"
+  graded="False">
+  <vertical
+    display_name="Overview"
+    url_name="overview">
+    <html
+      display_name="Overview"
+      url_name="overview">
+      <%block filter="olx_helpers.markdown_file">slides/overview.md</%block>
+    </html>
+  </vertical>
+</sequential>

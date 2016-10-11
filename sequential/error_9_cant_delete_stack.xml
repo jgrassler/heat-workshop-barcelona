@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 9: Can't delete stack"
+  graded="False">
+  <vertical
+    display_name="Error 9: Can't delete stack"
+    url_name="error_9_cant_delete_stack">
+    <html
+      display_name="Error 9: Can't delete stack"
+      url_name="error_9_cant_delete_stack">
+      <%block filter="olx_helpers.markdown_file">slides/error_9_cant_delete_stack.md</%block>
+    </html>
+  </vertical>
+</sequential>

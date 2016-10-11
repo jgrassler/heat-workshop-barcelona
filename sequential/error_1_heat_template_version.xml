@@ -1,0 +1,13 @@
+<sequential
+  display_name="Error 1: `heat_template_version`"
+  graded="False">
+  <vertical
+    display_name="Error 1: `heat_template_version`"
+    url_name="error_1_heat_template_version">
+    <html
+      display_name="Error 1: `heat_template_version`"
+      url_name="error_1_heat_template_version">
+      <%block filter="olx_helpers.markdown_file">slides/error_1_heat_template_version.md</%block>
+    </html>
+  </vertical>
+</sequential>
