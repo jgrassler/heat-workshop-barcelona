@@ -2,16 +2,16 @@
 
 **Modified command**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml -P flavor m1.ginormous mystack
-~~~
+```
 
 **Error message**
 
-~~~
+```
 resources.myserver: Went to status ERROR due to "Message: No valid host was
 found. There are not enough hosts available., Code: 500"
-~~~
+```
 
 **Resolution**
 

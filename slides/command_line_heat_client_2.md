@@ -1,26 +1,26 @@
 ## Command Line Heat Client (2)
 
 **Detailed Information about stack `mystack`**
-~~~
+```
 heat stack-show mystack
-~~~
+```
 Error messages (if any) in field `stack_status_reason` (more readable in
 `heat-engine.log`, if you have access)
 
 **List resources of stack `mystack`**
-~~~
+```
 heat resource-list -n 5 mystack
-~~~
+```
 
 **List outputs for stack `mystack`**
-~~~
+```
 heat output-list mystack
-~~~
+```
 
 **Get Output `floating_ip` from stack mystack**
-~~~
+```
 heat output-show mystack floating_ip
-~~~
+```
 
 <!--
 * To get detailed information about an existing stack you can use `heat

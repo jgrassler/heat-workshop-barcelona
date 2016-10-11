@@ -1,16 +1,16 @@
 ## Error 4: SSH key not found
 
 **Error Message**
-~~~
+```
 ERROR: Property error: : resources.myserver.properties.key_name: : Error
 validating value 'mykey': The Key (mykey) could not be found.
-~~~
+```
 
 **Resolution**
 
-~~~
+```
 nova keypair-add --pub-key ~/.ssh/id_rsa.pub mykey
-~~~
+```
 
 _Partial:_ `partial06.yaml`
 

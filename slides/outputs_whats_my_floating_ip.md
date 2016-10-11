@@ -1,21 +1,21 @@
 ## Outputs: What's my Floating IP?
 
 **12-outputs.yaml**
-~~~ yaml
+```yaml
 outputs:
   floating_ip:
     value:
       get_attr:
         - myfloatingip
         - floating_ip_address
-~~~
+```
 
 **Create the stack and display floating IP**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
 heat output-show mystack floating_ip
-~~~
+```
 
 _Partial:_ `partial12.yaml`
 

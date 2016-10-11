@@ -4,11 +4,11 @@ _Partial:_ `partial02-broken.yaml`
 
 **Error Message**
 
-~~~ yaml
+```yaml
 Error parsing template file:///crypt/home/johannes/src/talks/heat-workshop/partial/partial02-broken.yaml while scanning for the next token
 found character that cannot start any token
   in "<unicode string>", line 13, column 1
-~~~
+```
 
 **Resolution**
 
@@ -18,9 +18,9 @@ due to a key starting with non-alphanumeric characters.
 
 **Retry stack creation**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial02.yaml`
 

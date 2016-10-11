@@ -1,7 +1,7 @@
 ## Security Groups to the Rescue
 
 **10-group.yaml**
-~~~ yaml
+```yaml
   allow_inbound:
     type: OS::Neutron::SecurityGroup
     properties:
@@ -15,14 +15,14 @@
           port_range_max: 22
         - remote_ip_prefix: 0.0.0.0/0
           protocol: icmp
-~~~
+```
 
 **Create the stack and display floating IP**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
 heat resource-show mystack myfloatingip
-~~~
+```
 
 _Partial:_ `partial10.yaml`
 

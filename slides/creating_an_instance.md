@@ -1,7 +1,7 @@
 ## Creating an Instance
 
 **06-server.yaml**
-~~~ yaml
+```yaml
   myserver:
     type: OS::Nova::Server
     properties:
@@ -16,13 +16,13 @@
       user_data: |
         #!/bin/sh
         echo 'Hello, World' >> /etc/motd
-~~~
+```
 
 **Create the stack**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial06.yaml`
 

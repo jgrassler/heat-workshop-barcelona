@@ -1,20 +1,20 @@
 ## Creating a Router
 
 **07-router.yaml**
-~~~ yaml
+```yaml
   router:
     type: OS::Neutron::Router
     properties:
       external_gateway_info:
         network:
           get_param: floating_network
-~~~
+```
 
 **Create the stack**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial07.yaml`
 

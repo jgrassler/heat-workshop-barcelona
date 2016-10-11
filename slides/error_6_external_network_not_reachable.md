@@ -2,18 +2,18 @@
 
 **Check stack status**
 
-~~~
+```
 heat stack-show mystack
-~~~
+```
 
 **Error message**
 
-~~~
+```
 NotFound: resources.floatingip: External network
 27011e4a-1727-499a-9c1f-b372a62071a9 is not reachable from subnet
 dbe382bd-0ccf-4107-9f96-8cecad3797f1  Therefore, cannot associate Port
 162b6498-13ce-46b9-a436-76fb50f06c67 with a Floating IP.
-~~~
+```
 
 **Resolution**
 

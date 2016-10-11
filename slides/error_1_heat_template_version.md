@@ -4,9 +4,9 @@ _Partial:_ `partial01-broken.yaml`
 
 **Error Message**
 
-~~~
+```
 ERROR: The template version is invalid: "heat_template_version: 2525-01-01". "heat_template_version" should be one of: 2013-05-23, 2014-10-16, 2015-04-30, 2015-10-15
-~~~
+```
 
 **Resolution**
 

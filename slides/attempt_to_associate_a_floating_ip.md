@@ -1,20 +1,20 @@
 ## Attempt to associate a floating IP
 
 **09-float.yaml**
-~~~ yaml
+```yaml
   myfloatingip:
     type: OS::Neutron::FloatingIP
     properties:
       port_id: { get_resource: myport }
       floating_network:
         get_param: floating_network
-~~~
+```
 
 **Create the stack**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial09-broken.yaml`
 

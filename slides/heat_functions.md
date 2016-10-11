@@ -1,18 +1,18 @@
 ## Heat Functions
 
 **get_param**
-~~~ yaml
+```yaml
 key_name: { get_param: key_name }
-~~~
+```
 
 **get_resource**
-~~~ yaml
+```yaml
 networks:
         - port: { get_resource: myport }
-~~~
+```
 
 **`get_attr`**
-~~~ yaml
+```yaml
 outputs:
   floating_ip_address:
     description: The server's floating IP address.
@@ -20,7 +20,7 @@ outputs:
       get_attr: 
         - myfloating_ip          # resource
         - floating_ip_address  # attribute
-~~~
+```
 
 <!--
 To conclude the theory section I'd like to examine a few template snippets a

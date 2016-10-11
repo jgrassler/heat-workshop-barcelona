@@ -2,7 +2,7 @@
 
 **04-subnet.yaml**
 
-~~~ yaml
+```yaml
   mysubnet:
     type: OS::Neutron::Subnet
     properties:
@@ -10,13 +10,13 @@
       name: mysubnet
       network:
         get_resource: mynetwork
-~~~
+```
 
 **Create the stack**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial04.yaml`
 

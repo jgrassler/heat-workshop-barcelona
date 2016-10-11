@@ -2,17 +2,17 @@
 
 **Error message upon `stack-delete`**
 
-~~~
+```
 Unable to complete operation on subnet
 d5bda832-2816-4453-932e-c739cc0f1152. One or more ports
 have an IP allocation from this subnet.
-~~~
+```
 
 **Resolution**
 
-~~~
+```
 neutron port-list | grep d5bda832-2816-4453-932e-c739cc0f1152 | awk '{ print $2}'
-~~~
+```
 
 This will give you a list of Neutron port IDs. One of them belongs to
 `myserver` from the Heat stack, the rest are freeloaders. You need to get rid

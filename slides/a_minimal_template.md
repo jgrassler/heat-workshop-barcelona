@@ -2,17 +2,17 @@
 
 **with-errors/01-minimal.yaml**
 
-~~~ yaml
+```yaml
 heat_template_version: 2525-01-01
-~~~
+```
 
 **Try to create stack**
 
-~~~
+```
 . /root/openrc.myuser
 heat stack-create --poll -f \
      /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial01-broken.yaml`
 

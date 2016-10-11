@@ -1,7 +1,7 @@
 ## Port revisited
 
 **11-port.yaml**
-~~~ yaml
+```yaml
   myport:
     type: OS::Neutron::Port
     properties:
@@ -9,14 +9,14 @@
         get_resource: mynetwork
       security_groups:                # NEW
         - get_resource: allow_inbound # NEW
-~~~
+```
 
 **Create the stack and display floating IP**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
 heat resource-show mystack floatingip
-~~~
+```
 
 _Partial:_ `partial11.yaml`
 

@@ -1,6 +1,6 @@
 ## Heat Resources: An example
 
-~~~ yaml
+```yaml
 resources:
   myserver:
     type: OS::Nova::Server
@@ -12,7 +12,7 @@ resources:
       networks:
         - port: 
             get_resource: myport
-~~~
+```
 
 <!--
 Let's work our way up to the hands-on part and look at what we'll be working

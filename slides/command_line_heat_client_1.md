@@ -4,21 +4,21 @@ _Prerequisite: Environment with valid OpenStack credentials_
 
 **Create stack `mystack` from `/tmp/stack.yaml`**
 
-~~~
+```
 heat stack-create -f /tmp/stack.yaml mystack
-~~~
+```
 
 **With parameter**
 
-~~~
+```
 heat stack-create -f /tmp/stack.yaml -P flavor=m1.tiny mystack
-~~~
+```
 
 **Delete stack `mystack`** 
 
-~~~
+```
 heat stack-delete mystack
-~~~
+```
 
 <!--
 Now that we know what a Heat template is we'll need to send it to the Heat API

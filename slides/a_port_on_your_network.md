@@ -1,19 +1,19 @@
 ## A Port on your Network
 
 **05-port.yaml**
-~~~ yaml
+```yaml
   myport:
     type: OS::Neutron::Port
     properties:
       network:
         get_resource: mynetwork
-~~~
+```
 
 **Create the stack**
 
-~~~
+```
 heat stack-create --poll -f /tmp/stack.yaml mystack
-~~~
+```
 
 _Partial:_ `partial05.yaml`
 
