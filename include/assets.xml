@@ -1,0 +1,45 @@
+<%namespace file="/course.xml" import="*" />
+
+<%def name="asset_url(filename)", filter="trim">
+asset-v1:${course_org()}+${course_id()}+${run_name}+type@asset+block@${filename}
+</%def>
+
+<%def name="asset_markdown(name, filename)", filter="trim">
+[${name}](/${asset_url(filename)})
+</%def>
+
+<%def name="asset_policy(path, type=None, has_thumbnail=False, locked=False)", filter="trim">
+<%
+    import os
+    asset_name = path.replace('/', '_')
+    base_name = os.path.basename(path)
+%>
+    "${asset_name}": {
+        "contentType": ${'"{}"'.format(type) if type else "null"},
+        "content_son": {
+            "category": "asset",
+            "course": "${course_id()}",
+            "name": "${asset_name}",
+            "org": "${course_org()}",
+            "revision": null,
+            "run": "${run_name}",
+            "tag": "c4x"
+        },
+        "displayname": "${base_name}",
+        "filename": "${asset_url(asset_name)}",
+        "import_path": "${path}",
+        "locked": ${"true" if locked else "false"},
+        % if not has_thumbnail:
+        "thumbnail_location": null
+        % else:
+        "thumbnail_location": [
+            "c4x",
+            "${course_org()}",
+            "${course_id()}",
+            "thumbnail",
+            "${asset_name}",
+            null
+        ]
+        % endif
+    }
+</%def>
