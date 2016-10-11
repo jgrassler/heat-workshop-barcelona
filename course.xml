@@ -5,4 +5,5 @@
   course="${course.course()}"
   org="${course.org()}">
   <chapter url_name="introduction"/>
+  <chapter url_name="anatomy_of_a_heat_template"/>
 </course>
