@@ -6,8 +6,7 @@
     url_name="creating_a_subnet">
     <html
       display_name="Creating a Subnet"
-      url_name="creating_a_subnet">
-      <%block filter="olx_helpers.markdown_file">slides/creating_a_subnet.md</%block>
-    </html>
+      url_name="creating_a_subnet"
+      filename="creating_a_subnet.html" />
   </vertical>
 </sequential>

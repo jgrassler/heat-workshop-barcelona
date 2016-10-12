@@ -6,8 +6,7 @@
     url_name="overview">
     <html
       display_name="Overview"
-      url_name="overview">
-      <%block filter="olx_helpers.markdown_file">slides/overview.md</%block>
-    </html>
+      url_name="overview"
+      filename="overview.html" />
   </vertical>
 </sequential>

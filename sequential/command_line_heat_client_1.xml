@@ -6,8 +6,7 @@
     url_name="command_line_heat_client_1">
     <html
       display_name="Command Line Heat Client (1)"
-      url_name="command_line_heat_client_1">
-      <%block filter="olx_helpers.markdown_file">slides/command_line_heat_client_1.md</%block>
-    </html>
+      url_name="command_line_heat_client_1"
+      filename="command_line_heat_client_1.html" />
   </vertical>
 </sequential>

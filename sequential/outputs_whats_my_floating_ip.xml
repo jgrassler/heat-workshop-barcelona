@@ -6,8 +6,7 @@
     url_name="outputs_whats_my_floating_ip">
     <html
       display_name="Outputs: What's my Floating IP?"
-      url_name="outputs_whats_my_floating_ip">
-      <%block filter="olx_helpers.markdown_file">slides/outputs_whats_my_floating_ip.md</%block>
-    </html>
+      url_name="outputs_whats_my_floating_ip"
+      filename="outputs_whats_my_floating_ip.html" />
   </vertical>
 </sequential>

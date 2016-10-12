@@ -6,8 +6,7 @@
     url_name="error_4_ssh_key_not_found">
     <html
       display_name="Error 4: SSH key not found"
-      url_name="error_4_ssh_key_not_found">
-      <%block filter="olx_helpers.markdown_file">slides/error_4_ssh_key_not_found.md</%block>
-    </html>
+      url_name="error_4_ssh_key_not_found"
+      filename="error_4_ssh_key_not_found.html" />
   </vertical>
 </sequential>

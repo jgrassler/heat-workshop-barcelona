@@ -6,8 +6,7 @@
     url_name="creating_a_network">
     <html
       display_name="Creating a Network"
-      url_name="creating_a_network">
-      <%block filter="olx_helpers.markdown_file">slides/creating_a_network.md</%block>
-    </html>
+      url_name="creating_a_network"
+      filename="creating_a_network.html" />
   </vertical>
 </sequential>

@@ -6,8 +6,7 @@
     url_name="attempt_to_associate_a_floating_ip">
     <html
       display_name="Attempt to associate a floating IP"
-      url_name="attempt_to_associate_a_floating_ip">
-      <%block filter="olx_helpers.markdown_file">slides/attempt_to_associate_a_floating_ip.md</%block>
-    </html>
+      url_name="attempt_to_associate_a_floating_ip"
+      filename="attempt_to_associate_a_floating_ip.html" />
   </vertical>
 </sequential>

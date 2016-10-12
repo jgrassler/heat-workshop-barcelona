@@ -6,8 +6,7 @@
     url_name="error_6_external_network_not_reachable">
     <html
       display_name="Error 6: External network not reachable"
-      url_name="error_6_external_network_not_reachable">
-      <%block filter="olx_helpers.markdown_file">slides/error_6_external_network_not_reachable.md</%block>
-    </html>
+      url_name="error_6_external_network_not_reachable"
+      filename="error_6_external_network_not_reachable.html" />
   </vertical>
 </sequential>

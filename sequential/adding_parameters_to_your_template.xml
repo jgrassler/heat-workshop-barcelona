@@ -6,8 +6,7 @@
     url_name="adding_parameters_to_your_template">
     <html
       display_name="Adding parameters to your template"
-      url_name="adding_parameters_to_your_template">
-      <%block filter="olx_helpers.markdown_file">slides/adding_parameters_to_your_template.md</%block>
-    </html>
+      url_name="adding_parameters_to_your_template"
+      filename="adding_parameters_to_your_template.html" />
   </vertical>
 </sequential>

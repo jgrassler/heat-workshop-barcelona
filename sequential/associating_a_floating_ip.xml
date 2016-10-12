@@ -6,8 +6,7 @@
     url_name="associating_a_floating_ip">
     <html
       display_name="Associating a Floating IP"
-      url_name="associating_a_floating_ip">
-      <%block filter="olx_helpers.markdown_file">slides/associating_a_floating_ip.md</%block>
-    </html>
+      url_name="associating_a_floating_ip"
+      filename="associating_a_floating_ip.html" />
   </vertical>
 </sequential>
