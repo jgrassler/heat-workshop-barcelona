@@ -2,12 +2,13 @@
 
 **Begin resources section after parameters section**
 
-```yaml
+```
 resources:
 ```
 
 **03-network.yaml**
-```yaml
+
+```
   mynetwork:
     type: OS::Neutron::Net
     properties:
@@ -15,6 +16,7 @@ resources:
 ```
 
 **Create the stack**
+
 ```
 heat stack-create --poll -f /tmp/stack.yaml mystack
 ```

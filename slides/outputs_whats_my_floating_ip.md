@@ -1,6 +1,7 @@
 ## Outputs: What's my Floating IP?
 
 **12-outputs.yaml**
+
 ```yaml
 outputs:
   floating_ip:

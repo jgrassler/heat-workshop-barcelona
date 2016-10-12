@@ -1,4 +1,4 @@
-## Error 1: `heat_template_version`
+## Error 1: heat_template_version
 
 _Partial:_ `partial01-broken.yaml`
 

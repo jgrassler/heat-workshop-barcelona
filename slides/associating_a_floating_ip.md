@@ -1,6 +1,7 @@
 ## Associating a Floating IP
 
 **09-float.yaml**
+
 ```yaml
   myfloatingip:
     type: OS::Neutron::FloatingIP

@@ -1,6 +1,7 @@
 ## Security Groups to the Rescue
 
 **10-group.yaml**
+
 ```yaml
   allow_inbound:
     type: OS::Neutron::SecurityGroup

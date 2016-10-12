@@ -1,24 +1,27 @@
 ## Heat Functions
 
 **get_param**
+
 ```yaml
 key_name: { get_param: key_name }
 ```
 
 **get_resource**
+
 ```yaml
 networks:
         - port: { get_resource: myport }
 ```
 
 **`get_attr`**
+
 ```yaml
 outputs:
   floating_ip_address:
     description: The server's floating IP address.
     value: 
       get_attr: 
-        - myfloating_ip          # resource
+        - myfloating_ip        # resource
         - floating_ip_address  # attribute
 ```
 
