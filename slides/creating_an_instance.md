@@ -1,6 +1,7 @@
 ## Creating an Instance
 
 **06-server.yaml**
+
 ```yaml
   myserver:
     type: OS::Nova::Server

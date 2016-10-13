@@ -6,8 +6,7 @@
     url_name="what_is_heat">
     <html
       display_name="What is Heat?"
-      url_name="what_is_heat">
-      <%block filter="olx_helpers.markdown_file">slides/what_is_heat.md</%block>
-    </html>
+      url_name="what_is_heat"
+      filename="what_is_heat.html" />
   </vertical>
 </sequential>

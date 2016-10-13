@@ -6,8 +6,7 @@
     url_name="heat_resources_an_example">
     <html
       display_name="Heat Resources: An example"
-      url_name="heat_resources_an_example">
-      <%block filter="olx_helpers.markdown_file">slides/heat_resources_an_example.md</%block>
-    </html>
+      url_name="heat_resources_an_example"
+      filename="heat_resources_an_example.html" />
   </vertical>
 </sequential>

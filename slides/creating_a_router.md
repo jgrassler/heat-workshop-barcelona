@@ -1,6 +1,7 @@
 ## Creating a Router
 
 **07-router.yaml**
+
 ```yaml
   router:
     type: OS::Neutron::Router

@@ -6,8 +6,7 @@
     url_name="adding_a_routerinterface">
     <html
       display_name="Adding A RouterInterface"
-      url_name="adding_a_routerinterface">
-      <%block filter="olx_helpers.markdown_file">slides/adding_a_routerinterface.md</%block>
-    </html>
+      url_name="adding_a_routerinterface"
+      filename="adding_a_routerinterface.html" />
   </vertical>
 </sequential>

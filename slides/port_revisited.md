@@ -1,6 +1,7 @@
 ## Port revisited
 
 **11-port.yaml**
+
 ```yaml
   myport:
     type: OS::Neutron::Port

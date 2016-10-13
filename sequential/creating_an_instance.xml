@@ -6,8 +6,7 @@
     url_name="creating_an_instance">
     <html
       display_name="Creating an Instance"
-      url_name="creating_an_instance">
-      <%block filter="olx_helpers.markdown_file">slides/creating_an_instance.md</%block>
-    </html>
+      url_name="creating_an_instance"
+      filename="creating_an_instance.html" />
   </vertical>
 </sequential>

@@ -4,7 +4,7 @@ _Partial:_ `partial02-broken.yaml`
 
 **Error Message**
 
-```yaml
+```
 Error parsing template file:///crypt/home/johannes/src/talks/heat-workshop/partial/partial02-broken.yaml while scanning for the next token
 found character that cannot start any token
   in "<unicode string>", line 13, column 1

@@ -1,6 +1,7 @@
 ## A Port on your Network
 
 **05-port.yaml**
+
 ```yaml
   myport:
     type: OS::Neutron::Port

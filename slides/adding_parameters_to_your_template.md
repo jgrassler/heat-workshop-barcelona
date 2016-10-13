@@ -1,6 +1,7 @@
 ## Adding parameters to your template
 
 **02-parameters.yaml**
+
 ```yaml
 parameters:
   floating_network:

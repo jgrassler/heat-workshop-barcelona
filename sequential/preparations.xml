@@ -6,8 +6,7 @@
     url_name="preparations">
     <html
       display_name="Preparations"
-      url_name="preparations">
-      <%block filter="olx_helpers.markdown_file">slides/preparations.md</%block>
-    </html>
+      url_name="preparations"
+      filename="preparations.html" />
   </vertical>
 </sequential>

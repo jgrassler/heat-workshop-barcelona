@@ -6,8 +6,7 @@
     url_name="a_minimal_template">
     <html
       display_name="A minimal template"
-      url_name="a_minimal_template">
-      <%block filter="olx_helpers.markdown_file">slides/a_minimal_template.md</%block>
-    </html>
+      url_name="a_minimal_template"
+      filename="a_minimal_template.html" />
   </vertical>
 </sequential>

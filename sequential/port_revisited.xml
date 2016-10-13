@@ -6,8 +6,7 @@
     url_name="port_revisited">
     <html
       display_name="Port revisited"
-      url_name="port_revisited">
-      <%block filter="olx_helpers.markdown_file">slides/port_revisited.md</%block>
-    </html>
+      url_name="port_revisited"
+      filename="port_revisited.html" />
   </vertical>
 </sequential>
