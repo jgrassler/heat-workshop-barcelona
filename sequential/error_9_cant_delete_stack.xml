@@ -1,6 +1,7 @@
 <sequential
   display_name="Error 9: Can't delete stack"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Error 9: Can't delete stack"
     url_name="error_9_cant_delete_stack">
@@ -8,5 +9,11 @@
       display_name="Error 9: Can't delete stack"
       url_name="error_9_cant_delete_stack"
       filename="error_9_cant_delete_stack.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="error_9_cant_delete_stack_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

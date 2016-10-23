@@ -1,6 +1,7 @@
 <sequential
   display_name="Adding A RouterInterface"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Adding A RouterInterface"
     url_name="adding_a_routerinterface">
@@ -8,5 +9,11 @@
       display_name="Adding A RouterInterface"
       url_name="adding_a_routerinterface"
       filename="adding_a_routerinterface.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="adding_a_routerinterface_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

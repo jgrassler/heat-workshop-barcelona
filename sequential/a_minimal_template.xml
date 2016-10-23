@@ -1,6 +1,7 @@
 <sequential
   display_name="A minimal template"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="A minimal template"
     url_name="a_minimal_template">
@@ -8,5 +9,11 @@
       display_name="A minimal template"
       url_name="a_minimal_template"
       filename="a_minimal_template.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="a_minimal_template_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

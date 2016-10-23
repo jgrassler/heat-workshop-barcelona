@@ -1,6 +1,7 @@
 <sequential
   display_name="Port revisited"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Port revisited"
     url_name="port_revisited">
@@ -8,5 +9,11 @@
       display_name="Port revisited"
       url_name="port_revisited"
       filename="port_revisited.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="port_revisited_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

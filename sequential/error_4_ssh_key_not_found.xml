@@ -1,6 +1,7 @@
 <sequential
   display_name="Error 4: SSH key not found"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Error 4: SSH key not found"
     url_name="error_4_ssh_key_not_found">
@@ -8,5 +9,11 @@
       display_name="Error 4: SSH key not found"
       url_name="error_4_ssh_key_not_found"
       filename="error_4_ssh_key_not_found.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="error_4_ssh_key_not_found_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

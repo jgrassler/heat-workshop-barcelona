@@ -1,12 +1,19 @@
 <sequential
   display_name="Preparations"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Preparations"
     url_name="preparations">
     <html
       display_name="Preparations"
-      url_name="preparations"
+      url_name="preparations_instructions"
       filename="preparations.html" />
+    <hastexo
+      display_name="Preparations"
+      url_name="preparations_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

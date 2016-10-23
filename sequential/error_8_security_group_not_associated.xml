@@ -1,6 +1,7 @@
 <sequential
   display_name="Error 8: Security Group not associated"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Error 8: Security Group not associated"
     url_name="error_8_security_group_not_associated">
@@ -8,5 +9,11 @@
       display_name="Error 8: Security Group not associated"
       url_name="error_8_security_group_not_associated"
       filename="error_8_security_group_not_associated.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="error_8_security_group_not_associated_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

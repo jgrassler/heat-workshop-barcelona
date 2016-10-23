@@ -1,6 +1,7 @@
 <sequential
   display_name="Creating a Router"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Creating a Router"
     url_name="creating_a_router">
@@ -8,5 +9,11 @@
       display_name="Creating a Router"
       url_name="creating_a_router"
       filename="creating_a_router.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="creating_a_router_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

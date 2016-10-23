@@ -1,6 +1,7 @@
 <sequential
   display_name="Adding parameters to your template"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Adding parameters to your template"
     url_name="adding_parameters_to_your_template">
@@ -8,5 +9,11 @@
       display_name="Adding parameters to your template"
       url_name="adding_parameters_to_your_template"
       filename="adding_parameters_to_your_template.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="adding_parameters_to_your_template_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

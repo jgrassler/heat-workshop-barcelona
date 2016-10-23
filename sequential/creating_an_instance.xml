@@ -1,6 +1,7 @@
 <sequential
   display_name="Creating an Instance"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Creating an Instance"
     url_name="creating_an_instance">
@@ -8,5 +9,11 @@
       display_name="Creating an Instance"
       url_name="creating_an_instance"
       filename="creating_an_instance.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="creating_an_instance_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>
