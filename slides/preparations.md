@@ -9,9 +9,9 @@ git clone https://github.com/jgrassler/heat-workshop-barcelona
 **Install Heat command line client** 
 
 ```
-zypper install python-heatclient     # SUSE
-yum install python-heatclient        # RedHat
-aptitude install python-heatclient   # Debian/Ubuntu
+sudo zypper install python-heatclient     # SUSE
+sudo yum install python-heatclient        # RedHat
+sudo aptitude install python-heatclient   # Debian/Ubuntu
 ```
 
 **Prepare openrc**
