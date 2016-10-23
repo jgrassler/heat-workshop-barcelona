@@ -3,8 +3,7 @@
 **Get a local copy of slides**
 
 ```
-git clone https://github.com/jgrassler/talks.git
-cd talks/heat-workshop
+git clone https://github.com/jgrassler/heat-workshop-barcelona
 ```
 
 **Install Heat command line client** 
