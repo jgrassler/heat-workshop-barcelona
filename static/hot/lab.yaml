@@ -1,0 +1,207 @@
+heat_template_version: 2013-05-23
+
+description: >
+  Heat template for labs included in OpenStack Summit workshop 
+
+parameters:
+  deploy_flavor:
+    type: string
+    description: Flavor to use for deploy node
+    default: 1C-2GB
+  public_net_id:
+    type: string
+    description: Public network ID
+    default: fba95253-5543-4078-b793-e2de58c31378
+  image:
+    type: string
+    description: Image ID or name
+    default: trusty-server-cloudimg-amd64-20160928
+  timeout:
+    type: number
+    description: Timeout for stack creation to finish
+    default: 900
+
+resources:
+  all_done:
+    type: OS::Heat::WaitCondition
+    properties:
+      handle: {get_resource: all_done_handle}
+      count: 1
+      timeout: {get_param: timeout}
+
+  all_done_handle:
+    type: OS::Heat::WaitConditionHandle
+
+  proxy_ready:
+    type: OS::Heat::WaitCondition
+    properties:
+      handle: {get_resource: proxy_ready_handle}
+      count: 1
+      timeout: {get_param: timeout}
+
+  proxy_ready_handle:
+    type: OS::Heat::WaitConditionHandle
+
+  server_security_group:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Neutron security group rules
+      name: server_security_group
+      rules:
+      - remote_mode: 'remote_group_id'
+        remote_group_id:
+        direction: ingress
+      - remote_ip_prefix: 0.0.0.0/0
+        protocol: tcp
+        direction: ingress
+        port_range_min: 22
+        port_range_max: 22
+      - remote_ip_prefix: 0.0.0.0/0
+        protocol: icmp
+
+  user_keypair:
+    type: OS::Nova::KeyPair
+    properties:
+      name: { get_param: "OS::stack_id" }
+      save_private_key: true
+
+  deploy_config:
+    type: "OS::Heat::CloudConfig"
+    properties:
+      cloud_config:
+        ### bootcmd: runs arbitrary commands early in the boot sequence
+        bootcmd:
+          - apt-get update
+          - apt-get -y install --no-install-recommends apt-cacher-ng
+          - { get_attr: ['proxy_ready_handle', 'curl_cli'] }
+        package_update: false
+        package_upgrade: false
+        users:
+          - default
+          - name: training
+            groups: users,adm
+            lock-passwd: false
+            shell: /bin/bash
+            sudo: "ALL=(ALL) NOPASSWD:ALL"
+            ssh_authorized_keys:
+              - { get_attr: [ user_keypair, public_key ] }
+        write_files:
+          - path: /etc/cron.d/hwclock
+            permissions: '0644'
+            content: |
+              # /etc/cron.d/hwclock: periodically sync the system time to the hardware clock
+              SHELL=/bin/sh
+              PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+              */5 * * * *   root	hwclock -s
+          - path: /etc/hosts
+            permissions: '0644'
+            content: |
+              127.0.0.1 localhost
+              ::1       ip6-localhost ip6-loopback
+              fe00::0   ip6-localnet
+              ff00::0   ip6-mcastprefix
+              ff02::1   ip6-allnodes
+              ff02::2   ip6-allrouters
+
+              192.168.122.100 deploy.example.com deploy
+              192.168.122.111 alice.example.com alice
+              192.168.122.112 bob.example.com bob
+              192.168.122.113 charlie.example.com charlie
+              192.168.122.114 daisy.example.com daisy
+              192.168.122.115 eric.example.com eric
+              192.168.122.116 frank.example.com frank
+              192.168.122.117 gina.example.com gina
+              192.168.122.118 harry.example.com harry
+              192.168.122.119 ian.example.com ian
+              192.168.122.120 julie.example.com julie
+              192.168.122.121 ken.example.com ken
+              192.168.122.122 laura.example.com laura
+          - path: '/home/training/.ssh/id_rsa'
+            permissions: '0600'
+            content: { get_attr: [ user_keypair, private_key ] }
+        apt_proxy: "http://localhost:3142"
+        packages:
+          - dnsmasq
+          - screen
+          - git
+          - python-cinderclient
+          - python-glanceclient
+          - python-openstackclient
+          - python-keystoneclient
+          - python-neutronclient
+          - python-novaclient
+          - python-heatclient
+        runcmd:
+          - cp /etc/skel/.??* /home/training
+          - echo "exec /usr/bin/screen -xRR" >> /home/training/.profile
+          - chown -R training:training /home/training
+          - sleep `bash -c 'echo $[($RANDOM % 10) + 1]'`
+          - { get_attr: ['all_done_handle', 'curl_cli'] }
+
+  management_net:
+    type: OS::Neutron::Net
+    properties:
+      name: management-net
+
+  management_sub_net:
+    type: OS::Neutron::Subnet
+    properties:
+      name: management-sub-net
+      network_id: { get_resource: management_net }
+      cidr: 192.168.122.0/24
+      gateway_ip: 192.168.122.1
+      enable_dhcp: true
+      allocation_pools: [{"start": "192.168.122.200", "end": "192.168.122.250"}]
+      dns_nameservers:
+        - 192.168.122.100
+        - 8.8.8.8
+        - 8.8.4.4
+
+  router:
+    type: OS::Neutron::Router
+
+  router_gateway:
+    type: OS::Neutron::RouterGateway
+    properties:
+      router_id: { get_resource: router }
+      network_id: { get_param: public_net_id }
+
+  router_interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: router }
+      subnet_id: { get_resource: management_sub_net }
+
+  deploy:
+    type: OS::Nova::Server
+    properties:
+      name: deploy
+      image: { get_param: image }
+      flavor: { get_param: deploy_flavor }
+      user_data: { get_resource: deploy_config }
+      user_data_format: RAW
+      networks:
+        - port: { get_resource: deploy_management_port }
+
+  deploy_management_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: management_net }
+      security_groups:
+        - { get_resource: server_security_group }
+      fixed_ips:
+        - ip_address: 192.168.122.100
+
+  deploy_floating_ip:
+    type: OS::Neutron::FloatingIP
+    properties:
+      floating_network_id: { get_param: public_net_id }
+      port_id: { get_resource: deploy_management_port }
+
+outputs:
+  public_ip:
+    description: Floating IP address of deploy host in public network
+    value: { get_attr: [ deploy_floating_ip, floating_ip_address ] }
+  private_key:
+    description: Training private key
+    value: { get_attr: [ user_keypair, private_key ] }

@@ -1,6 +1,7 @@
 <sequential
   display_name="A Port on your Network"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="A Port on your Network"
     url_name="a_port_on_your_network">
@@ -8,5 +9,11 @@
       display_name="A Port on your Network"
       url_name="a_port_on_your_network"
       filename="a_port_on_your_network.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="a_port_on_your_network_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

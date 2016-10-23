@@ -1,6 +1,7 @@
 <sequential
   display_name="Outputs: What's my Floating IP?"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Outputs: What's my Floating IP?"
     url_name="outputs_whats_my_floating_ip">
@@ -8,5 +9,11 @@
       display_name="Outputs: What's my Floating IP?"
       url_name="outputs_whats_my_floating_ip"
       filename="outputs_whats_my_floating_ip.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="outputs_whats_my_floating_ip_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

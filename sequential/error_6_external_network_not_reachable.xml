@@ -1,6 +1,7 @@
 <sequential
   display_name="Error 6: External network not reachable"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Error 6: External network not reachable"
     url_name="error_6_external_network_not_reachable">
@@ -8,5 +9,11 @@
       display_name="Error 6: External network not reachable"
       url_name="error_6_external_network_not_reachable"
       filename="error_6_external_network_not_reachable.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="error_6_external_network_not_reachable_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

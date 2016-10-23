@@ -1,6 +1,7 @@
 <sequential
   display_name="Error 5: No valid host was found"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Error 5: No valid host was found"
     url_name="error_5_no_valid_host_was_found">
@@ -8,5 +9,11 @@
       display_name="Error 5: No valid host was found"
       url_name="error_5_no_valid_host_was_found"
       filename="error_5_no_valid_host_was_found.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="error_5_no_valid_host_was_found_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

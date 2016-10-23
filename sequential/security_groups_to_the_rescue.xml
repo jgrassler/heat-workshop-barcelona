@@ -1,6 +1,7 @@
 <sequential
   display_name="Security Groups to the Rescue"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Security Groups to the Rescue"
     url_name="security_groups_to_the_rescue">
@@ -8,5 +9,11 @@
       display_name="Security Groups to the Rescue"
       url_name="security_groups_to_the_rescue"
       filename="security_groups_to_the_rescue.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="security_groups_to_the_rescue_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

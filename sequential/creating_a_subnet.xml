@@ -1,6 +1,7 @@
 <sequential
   display_name="Creating a Subnet"
-  graded="False">
+  graded="False"
+  format="Lab">
   <vertical
     display_name="Creating a Subnet"
     url_name="creating_a_subnet">
@@ -8,5 +9,11 @@
       display_name="Creating a Subnet"
       url_name="creating_a_subnet"
       filename="creating_a_subnet.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="creating_a_subnet_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
   </vertical>
 </sequential>

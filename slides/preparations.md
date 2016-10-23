@@ -2,17 +2,16 @@
 
 **Get a local copy of slides**
 
-```
-git clone https://github.com/jgrassler/talks.git
-cd talks/heat-workshop
+```bash
+git clone https://github.com/jgrassler/heat-workshop-barcelona
 ```
 
 **Install Heat command line client** 
 
-```
-zypper install python-heatclient     # SUSE
-yum install python-heatclient        # RedHat
-aptitude install python-heatclient   # Debian/Ubuntu
+```bash
+sudo zypper install python-heatclient     # SUSE
+sudo yum install python-heatclient        # RedHat
+sudo aptitude install python-heatclient   # Debian/Ubuntu
 ```
 
 **Prepare openrc**
@@ -20,7 +19,7 @@ aptitude install python-heatclient   # Debian/Ubuntu
 Log in to the cloud dashboard using one of the credentials sheets we handed out
 and download an openrc to ~/openrc.workshop. Source that openrc:
 
-```
+```bash
 source ~/openrc.workshop
 ```
 
