@@ -14,5 +14,4 @@ parameters:
     default: 1C-0.5GB
   key_name:
     type: string
-    default: mykey
 
