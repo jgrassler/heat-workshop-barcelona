@@ -7,7 +7,7 @@ parameters:
   deploy_flavor:
     type: string
     description: Flavor to use for deploy node
-    default: 1C-2GB
+    default: 1C-0.5GB
   public_net_id:
     type: string
     description: Public network ID
