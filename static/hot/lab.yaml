@@ -32,16 +32,6 @@ resources:
   all_done_handle:
     type: OS::Heat::WaitConditionHandle
 
-  proxy_ready:
-    type: OS::Heat::WaitCondition
-    properties:
-      handle: {get_resource: proxy_ready_handle}
-      count: 1
-      timeout: {get_param: timeout}
-
-  proxy_ready_handle:
-    type: OS::Heat::WaitConditionHandle
-
   server_security_group:
     type: OS::Neutron::SecurityGroup
     properties:
@@ -69,11 +59,6 @@ resources:
     type: "OS::Heat::CloudConfig"
     properties:
       cloud_config:
-        ### bootcmd: runs arbitrary commands early in the boot sequence
-        bootcmd:
-          - apt-get update
-          - apt-get -y install --no-install-recommends apt-cacher-ng
-          - { get_attr: ['proxy_ready_handle', 'curl_cli'] }
         package_update: false
         package_upgrade: false
         users:
@@ -119,7 +104,6 @@ resources:
           - path: '/home/training/.ssh/id_rsa'
             permissions: '0600'
             content: { get_attr: [ user_keypair, private_key ] }
-        apt_proxy: "http://localhost:3142"
         packages:
           - dnsmasq
           - screen
