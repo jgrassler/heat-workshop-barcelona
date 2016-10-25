@@ -12,7 +12,7 @@ parameters:
   floating_network:
 		description: A network containing one or more floating IP pools # BAD INDENT HERE
     type: string
-    default: floating
+    default: ext-net
   image:
     description: The image to use for the server
     type: string
