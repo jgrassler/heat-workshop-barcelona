@@ -20,7 +20,7 @@ parameters:
   flavor:
     description: The image to use for the server
     type: string
-    default: m1.tiny
+    default: 1C-0.5GB
   key_name:
     description: The image to use for the server
     type: string

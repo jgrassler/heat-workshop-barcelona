@@ -11,7 +11,7 @@ parameters:
     default: cd498f49-6766-4bba-82bd-5433d3656b84 # NEW
   flavor:
     type: string
-    default: m1.tiny
+    default: 1C-0.5GB
   key_name:
     type: string
     default: mykey
