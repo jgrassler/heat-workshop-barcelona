@@ -39,7 +39,9 @@ SLIDES := \
 	slides/error_8_security_group_not_associated.md \
 	slides/port_revisited.md \
 	slides/outputs_whats_my_floating_ip.md \
-	slides/error_9_cant_delete_stack.md
+	slides/error_9_cant_delete_stack.md \
+	slides/cloud_config.md \
+	slides/wait_condition.md
 
 slides.md: $(SLIDES)
 	cat $(SLIDES) > $@
