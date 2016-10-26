@@ -8,12 +8,16 @@ parameters:
     default: ext-net
   image:
     type: string
-    default: cirros-0.3.4-x86_64-disk.img
+    default: cd498f49-6766-4bba-82bd-5433d3656b84
   flavor:
     type: string
     default: 1C-0.5GB
   key_name:
     type: string
+  timeout: # NEW
+    type: number
+    description: Timeout for stack creation to finish
+    default: 300
 
 
 resources:
@@ -32,6 +36,32 @@ resources:
       network:
         get_resource: mynetwork
 
+  myconfig:
+    type: "OS::Heat::CloudConfig"
+    properties:
+      cloud_config:
+        package_update: false
+        package_upgrade: false
+        packages:
+          - emacs-nox
+          - git
+        runcmd:
+          - echo 'Hello, World' >> /etc/motd
+          - { get_attr: ['all_done_handle', 'curl_cli'] } # NEW
+
+
+  all_done: # NEW
+    type: OS::Heat::WaitCondition
+    properties:
+      handle: {get_resource: all_done_handle}
+      count: 1
+      timeout: {get_param: timeout}
+
+
+  all_done_handle: # NEW
+    type: OS::Heat::WaitConditionHandle
+
+
   myserver:
     type: OS::Nova::Server
     properties:
@@ -43,9 +73,7 @@ resources:
       networks:
         - port: { get_resource: myport }
       user_data_format: RAW
-      user_data: |
-        #!/bin/sh
-        echo 'Hello, World' >> /etc/motd
+      user_data: { get_resource: myconfig }
 
   router:
     type: OS::Neutron::Router
@@ -90,8 +118,8 @@ resources:
     properties:
       network:
         get_resource: mynetwork
-      security_groups:                # NEW
-        - get_resource: allow_inbound # NEW
+      security_groups:
+        - get_resource: allow_inbound
 
 
 outputs:

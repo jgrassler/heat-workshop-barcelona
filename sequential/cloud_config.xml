@@ -1,0 +1,19 @@
+<sequential
+  display_name="CloudConfig resources"
+  graded="False"
+  format="Lab">
+  <vertical
+    display_name="CloudConfig"
+    url_name="cloud_config">
+    <html
+      display_name="CloudConfig"
+      url_name="cloud_config"
+      filename="cloud_config.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="cloud_config_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
+  </vertical>
+</sequential>

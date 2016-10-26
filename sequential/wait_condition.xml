@@ -1,0 +1,19 @@
+<sequential
+  display_name="WaitCondition resources"
+  graded="False"
+  format="Lab">
+  <vertical
+    display_name="WaitCondition"
+    url_name="wait_condition">
+    <html
+      display_name="WaitCondition"
+      url_name="wait_condition"
+      filename="wait_condition.html" />
+    <hastexo
+      display_name="Lab"
+      url_name="wait_condition_lab"
+      stack_template_path="hot_lab.yaml"
+      stack_user_name="training">
+    </hastexo>
+  </vertical>
+</sequential>

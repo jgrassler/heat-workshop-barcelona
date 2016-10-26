@@ -1,5 +1,5 @@
 <%def name="display_name()">Building an Advanced Heat Template from the Ground Up</%def>
-<%def name="course()">heat-workshop-barcelona</%def>
+<%def name="course()">heat</%def>
 <%def name="org()">hastexo</%def>
 
 ##

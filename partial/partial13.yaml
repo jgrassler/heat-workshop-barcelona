@@ -8,7 +8,7 @@ parameters:
     default: ext-net
   image:
     type: string
-    default: cirros-0.3.4-x86_64-disk.img
+    default: cd498f49-6766-4bba-82bd-5433d3656b84 # NEW
   flavor:
     type: string
     default: 1C-0.5GB
@@ -32,6 +32,18 @@ resources:
       network:
         get_resource: mynetwork
 
+  myconfig: # NEW
+    type: "OS::Heat::CloudConfig"
+    properties:
+      cloud_config:
+        package_update: false
+        package_upgrade: false
+        packages:
+          - emacs-nox
+          - git
+        runcmd:
+          - echo 'Hello, World' >> /etc/motd
+
   myserver:
     type: OS::Nova::Server
     properties:
@@ -43,9 +55,7 @@ resources:
       networks:
         - port: { get_resource: myport }
       user_data_format: RAW
-      user_data: |
-        #!/bin/sh
-        echo 'Hello, World' >> /etc/motd
+      user_data: { get_resource: myconfig } # NEW
 
   router:
     type: OS::Neutron::Router
@@ -90,8 +100,8 @@ resources:
     properties:
       network:
         get_resource: mynetwork
-      security_groups:                # NEW
-        - get_resource: allow_inbound # NEW
+      security_groups:
+        - get_resource: allow_inbound
 
 
 outputs:
