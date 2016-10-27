@@ -2,14 +2,13 @@
 parameters:
   floating_network:
     type: string
-    default: floating
+    default: ext-net
   image:
     type: string
     default: cirros-0.3.4-x86_64-disk.img
   flavor:
     type: string
-    default: m1.tiny
+    default: 1C-0.5GB
   key_name:
     type: string
-    default: mykey
 

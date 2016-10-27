@@ -9,7 +9,7 @@ parameters:
   floating_network:
 		description: A network containing one or more floating IP pools # BAD INDENT HERE
     type: string
-    default: floating
+    default: ext-net
   image:
     description: The image to use for the server
     type: string
@@ -17,9 +17,7 @@ parameters:
   flavor:
     description: The image to use for the server
     type: string
-    default: m1.tiny
+    default: 1C-0.5GB
   key_name:
-    description: The image to use for the server
     type: string
-    default: root
 

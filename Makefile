@@ -70,7 +70,7 @@ clean:
 	rm -f slides.md
 	rm -f img/*png
 	rm -f img/*PNG
-	rm -rf partial
+	rm -rf partial/0* partial/partial11.yaml partial/partial12.yaml
 
 transcript.txt: slides.md
 	bin/htmlcomments slides.md > transcript.txt
